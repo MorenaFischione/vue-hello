@@ -23,13 +23,14 @@
     <div class="container" id="root">
         <div class="row justify-content-center">
             <div class="col-12 p-5 text-center">
-                <h1> {{ message }} </h1>
+                <h1 :class="mieClassi"> {{ title }} </h1>
                 <img :src="img" alt="Homer disperato">
             </div>
             <div class="col-12 p-5 text-center">
                 <input type="text" v-model="nome" placeholder="nome">
                 <input type="text" v-model="cognome" placeholder="cognome">
-                <h1> {{ message }} {{nome}} {{cognome}}</h1>
+                <h1 :class="color"> {{ message }} {{nome}} {{cognome}}</h1>
+                <button @click="changeColor" class="btn-lg btn-primary">Cliccami</button>
             </div>
         </div>
     </div>
